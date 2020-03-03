@@ -120,7 +120,7 @@
         }
 
         function weekend_discount() {
-            var date = new Date(2020, 2, 7);
+            var date = new Date();
             var day = date.getDay();
 
             var egg = document.send.egg_price.value;
@@ -160,7 +160,7 @@
                 var coconut_dis = coconut - (0.02 * parseInt(coconut));
                 document.send.coco_price.value = coconut_dis;
             }
-            
+
             else {
                 window.alert("TODAY: " + date + "\n\nSPECIAL OFFER ONLY ON WEEKEND");
             }
