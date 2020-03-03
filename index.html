@@ -120,20 +120,19 @@
         }
 
         function weekend_discount() {
-            var date = new Date();
+            var date = new Date(2020, 2, 8);
             var day = date.getDay();
 
-            var egg = document.send.egg_price.value;
-            var milk = document.send.milk_price.value;
-            var oatmeal = document.send.oatmeal_price.value;
-            var cucumber = document.send.cucumber_price.value;
-            var tomato = document.send.tomato_price.value;
-            var vegoil = document.send.vegoil_price.value;
-            var honey = document.send.honey_price.value;
-            var coconut = document.send.coco_price.value;
+            var egg = 10000;
+            var milk = 16000;
+            var oatmeal = 35000;
+            var cucumber = 6000;
+            var tomato = 12000;
+            var vegoil = 12000;
+            var honey = 16000;
+            var coconut = 5000;
 
             if (day == 0 || day == 6) {
-
                 window.alert("TODAY: " + date + "\n\nSPECIAL OFFER for the Weekend! Discount 2% on all items!");
 
                 var egg_dis = egg - (0.02 * parseInt(egg));
