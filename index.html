@@ -112,14 +112,64 @@
                 }
             }
 
-            document.send.total_temp.value = total_temp;
-            document.send.total.value = total;
+            var discount = total_temp - total;
 
+            document.send.total_temp.value = total_temp;
+            document.send.discount.value = discount;
+            document.send.total.value = total;
         }
+
+        function weekend_discount() {
+            var date = new Date();
+            var day = date.getDay();
+
+            var egg = document.send.egg_price.value;
+            var milk = document.send.milk_price.value;
+            var oatmeal = document.send.oatmeal_price.value;
+            var cucumber = document.send.cucumber_price.value;
+            var tomato = document.send.tomato_price.value;
+            var vegoil = document.send.vegoil_price.value;
+            var honey = document.send.honey_price.value;
+            var coconut = document.send.coco_price.value;
+
+            if (day == 0 || day == 6) {
+
+                window.alert("SPECIAL OFFER for the Weekend! Discount 2% on all items!");
+
+                var egg_dis = egg - (0.02 * parseInt(egg));
+                document.send.egg_price.value = egg_dis;
+
+                var milk_dis = milk - (0.02 * parseInt(milk));
+                document.send.milk_price.value = milk_dis;
+
+                var oat_dis = oatmeal - (0.02 * parseInt(oatmeal));
+                document.send.oatmeal_price.value = oat_dis;
+
+                var cucumber_dis = cucumber - (0.02 * parseInt(cucumber));
+                document.send.cucumber_price.value = cucumber_dis;
+
+                var tomato_dis = tomato - (0.02 * parseInt(tomato));
+                document.send.tomato_price.value = tomato_dis;
+
+                var vegoil_dis = vegoil - (0.02 * parseInt(vegoil));
+                document.send.vegoil_price.value = vegoil_dis;
+
+                var honey_dis = honey - (0.02 * parseInt(honey));
+                document.send.honey_price.value = honey_dis;
+
+                var coconut_dis = coconut - (0.02 * parseInt(coconut));
+                document.send.coco_price.value = coconut_dis;
+            }
+            else {
+                window.alert("TODAY: " + date + "\n\nSPECIAL OFFER ONLY ON WEEKEND");
+            }
+        }
+
     </script>
 </head>
 
-<body>
+<body onload="weekend_discount()" on>
+    
     <div class="div-head">
         <h1 style="font-weight: bold;">BUY YOUR GROCERIES</h1>
     </div>
@@ -239,6 +289,10 @@
             <tr style="background-color: khaki;">
                 <td colspan="3" style="font-weight: bold; text-align: center;">Total Price</td>
                 <td><input type="text" name="total_temp" id="tot" disabled value="0" style="text-align: right;"></td>
+            </tr>
+            <tr style="background-color: khaki;">
+                <td colspan="3" style="font-weight: bold; text-align: center;">Discount</td>
+                <td><input type="text" name="discount" id="tot" disabled value="0" style="text-align: right;"></td>
             </tr>
             <tr style="background-color: khaki;">
                 <td colspan="3" style="font-weight: bold; text-align: center;">Total Payment</td>
