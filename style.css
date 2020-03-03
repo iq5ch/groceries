@@ -1,0 +1,67 @@
+body {
+    background-color: lightyellow;
+}
+
+table {
+    background-color: white;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px 12px 40px;
+}
+
+th {
+    height: 40px;
+    text-align: center;
+    background-color: khaki;
+}
+
+#num {
+    text-align: center;
+}
+
+#member {
+    width: 100%;
+    padding: 12px 20px 12px 40px;
+    background-color: khaki;
+}
+
+#decrement {
+    background-color: lightgrey;
+    font-weight: bold;
+    padding: 12px 12px 12px 12px;
+    width: 10%;
+}
+
+#increment {
+    background-color: lightgrey;
+    font-weight: bold;
+    padding: 12px 12px 12px 12px;
+    width: 10%;
+}
+
+form {
+    padding: 12px 40px 12px 40px;
+}
+
+.div-head {
+    padding: 12px 40px 12px 40px;
+    background-color: darkslategray;
+}
+
+.quantity {
+    width: 78%;
+    padding: 12px 20px 12px 40px;
+}
+
+.add-div {
+    padding: 10px 0 10px 0;
+}
+
+.done-btn {
+    width: 100%;
+    font-weight: bold;
+    background-color: darkslategray;
+}
