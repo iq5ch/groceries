@@ -119,7 +119,7 @@
             document.send.total.value = total;
         }
 
-        function weekend_discount() {
+        function price() {
             var date = new Date();
             var day = date.getDay();
 
@@ -133,42 +133,51 @@
             var coconut = 5000;
 
             if (day == 0 || day == 6) {
-                window.alert("TODAY: " + date + "\n\nSPECIAL OFFER for the Weekend! Discount 2% on all items!");
+                window.alert("TODAY: " + date + "\n\nSPECIAL OFFER for the Weekend! 2% Discount on All Items!");
 
                 var egg_dis = egg - (0.02 * parseInt(egg));
-                document.send.egg_price.value = egg_dis;
+                document.send.egg_price.value = egg_dis + " IDR";
 
                 var milk_dis = milk - (0.02 * parseInt(milk));
-                document.send.milk_price.value = milk_dis;
+                document.send.milk_price.value = milk_dis + " IDR";
 
                 var oat_dis = oatmeal - (0.02 * parseInt(oatmeal));
-                document.send.oatmeal_price.value = oat_dis;
+                document.send.oatmeal_price.value = oat_dis + " IDR";
 
                 var cucumber_dis = cucumber - (0.02 * parseInt(cucumber));
-                document.send.cucumber_price.value = cucumber_dis;
+                document.send.cucumber_price.value = cucumber_dis + " IDR";
 
                 var tomato_dis = tomato - (0.02 * parseInt(tomato));
-                document.send.tomato_price.value = tomato_dis;
+                document.send.tomato_price.value = tomato_dis + " IDR";
 
                 var vegoil_dis = vegoil - (0.02 * parseInt(vegoil));
-                document.send.vegoil_price.value = vegoil_dis;
+                document.send.vegoil_price.value = vegoil_dis + " IDR";
 
                 var honey_dis = honey - (0.02 * parseInt(honey));
-                document.send.honey_price.value = honey_dis;
+                document.send.honey_price.value = honey_dis + " IDR";
 
                 var coconut_dis = coconut - (0.02 * parseInt(coconut));
-                document.send.coco_price.value = coconut_dis;
+                document.send.coco_price.value = coconut_dis + " IDR";
             }
 
             else {
-                window.alert("TODAY: " + date + "\n\nSPECIAL OFFER ONLY ON WEEKEND");
+                window.alert("TODAY: " + date + "\n\nSorry. Special Offer 2% Discount ONLY ON WEEKEND");
+
+                document.send.egg_price.value = egg + " IDR";
+                document.send.milk_price.value = milk + " IDR";
+                document.send.oatmeal_price.value = oatmeal + " IDR";
+                document.send.cucumber_price.value = cucumber + " IDR";
+                document.send.tomato_price.value = tomato + " IDR";
+                document.send.vegoil_price.value = vegoil + " IDR";
+                document.send.honey_price.value = honey + " IDR";
+                document.send.coco_price.value = coconut + " IDR";
             }
         }
 
     </script>
 </head>
 
-<body onload="weekend_discount()" on>
+<body onload="price()" on>
     
     <div class="div-head">
         <h1 style="font-weight: bold;">BUY YOUR GROCERIES</h1>
@@ -186,7 +195,7 @@
                 <td>
                     <input type="text" name="egg" value="Egg (10 pcs)" disabled>
                 </td>
-                <td><input type="text" name="egg_price" value="10000" disabled></td>
+                <td><input type="text" name="egg_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'eggq')">
                     <input class="quantity" type="number" name="egg_quantity" id="eggq" value="0" disabled>
@@ -198,7 +207,7 @@
                 <td>
                     <input type="text" name="coco" value="Coconut (1 pcs)" disabled>
                 </td>
-                <td><input type="text" name="coco_price" value="5000" disabled></td>
+                <td><input type="text" name="coco_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'cocoq')">
                     <input class="quantity" type="number" name="coco_quantity" id="cocoq" value="0" disabled>
@@ -210,7 +219,7 @@
                 <td>
                     <input type="text" name="milk" value="Milk (1 l)" disabled>
                 </td>
-                <td><input type="text" name="milk_price" value="16000" disabled></td>
+                <td><input type="text" name="milk_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'milkq')">
                     <input class="quantity" type="number" name="milk_quantity" id="milkq" value="0" disabled>
@@ -222,7 +231,7 @@
                 <td>
                     <input type="text" name="vegoil" value="Vegetable Oil (1 l)" disabled>
                 </td>
-                <td><input type="text" name="vegoil_price" value="12000" disabled></td>
+                <td><input type="text" name="vegoil_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'vegq')">
                     <input class="quantity" type="number" name="vegoil_quantity" id="vegq" value="0" disabled>
@@ -234,7 +243,7 @@
                 <td>
                     <input type="text" name="cucumber" value="Cucumbers (1 kg)" disabled>
                 </td>
-                <td><input type="text" name="cucumber_price" value="6000" disabled></td>
+                <td><input type="text" name="cucumber_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'cucumbq')">
                     <input class="quantity" type="number" name="cucumber_quantity" id="cucumbq" value="0" disabled>
@@ -246,7 +255,7 @@
                 <td>
                     <input type="text" name="tomato" value="Tomatoes (1 kg)" disabled>
                 </td>
-                <td><input type="text" name="tomato_price" value="12000" disabled></td>
+                <td><input type="text" name="tomato_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'tomq')">
                     <input class="quantity" type="number" name="tomato_quantity" id="tomq" value="0" disabled>
@@ -258,7 +267,7 @@
                 <td>
                     <input type="text" name="honey" value="Honey (315 gr)" disabled>
                 </td>
-                <td><input type="text" name="honey_price" value="16000" disabled></td>
+                <td><input type="text" name="honey_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'honq')">
                     <input class="quantity" type="number" name="honey_quantity" id="honq" value="0" disabled>
@@ -270,7 +279,7 @@
                 <td>
                     <input type="text" name="oatmeal" value="Oatmeal (900 gr)" disabled>
                 </td>
-                <td><input type="text" name="oatmeal_price" value="35000" disabled></td>
+                <td><input type="text" name="oatmeal_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'oatq')">
                     <input class="quantity" type="number" name="oatmeal_quantity" id="oatq" value="0" disabled>
@@ -287,7 +296,7 @@
                 </td>
             </tr>
             <tr style="background-color: khaki;">
-                <td colspan="3" style="font-weight: bold; text-align: center;">Total Price</td>
+                <td colspan="3" style="font-weight: bold; text-align: center;">Total Purchase</td>
                 <td><input type="text" name="total_temp" id="tot" disabled value="0" style="text-align: right;"></td>
             </tr>
             <tr style="background-color: khaki;">
@@ -300,7 +309,11 @@
             </tr>
         </table>
 
-        <div class="add-div">
+        <div>
+            <p style="text-align: right;">10% discount for total purchase more than 100000 IDR</p> <br>
+        </div>
+
+        <div class="done-div">
             <input class="done-btn" type="button" value="SUBMIT" onclick="calculate()" />
         </div>
 
