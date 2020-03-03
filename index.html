@@ -117,6 +117,7 @@
             document.send.total_temp.value = total_temp;
             document.send.discount.value = discount;
             document.send.total.value = total;
+
         }
 
         function price() {
@@ -161,7 +162,7 @@
             }
 
             else {
-                window.alert("TODAY: " + date + "\n\nSorry. Special Offer 2% Discount ONLY ON WEEKEND");
+                window.alert("TODAY: " + date + "\n\nSORRY. \nSpecial Offer 2% Discount ONLY ON WEEKEND");
 
                 document.send.egg_price.value = egg + " IDR";
                 document.send.milk_price.value = milk + " IDR";
@@ -198,7 +199,7 @@
                 <td><input type="text" name="egg_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'eggq')">
-                    <input class="quantity" type="number" name="egg_quantity" id="eggq" value="0" disabled>
+                    <input class="quantity" type="text" name="egg_quantity" id="eggq" value="0" disabled>
                     <input type="button" value="+" name="" id="increment" onclick="up('50', 'eggq')">
                 </td>
             </tr>
@@ -210,7 +211,7 @@
                 <td><input type="text" name="coco_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'cocoq')">
-                    <input class="quantity" type="number" name="coco_quantity" id="cocoq" value="0" disabled>
+                    <input class="quantity" type="text" name="coco_quantity" id="cocoq" value="0" disabled>
                     <input type="button" value="+" name="" id="increment" onclick="up('50', 'cocoq')">
                 </td>
             </tr>
@@ -222,7 +223,7 @@
                 <td><input type="text" name="milk_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'milkq')">
-                    <input class="quantity" type="number" name="milk_quantity" id="milkq" value="0" disabled>
+                    <input class="quantity" type="text" name="milk_quantity" id="milkq" value="0" disabled>
                     <input type="button" value="+" name="" id="increment" onclick="up('50', 'milkq')">
                 </td>
             </tr>
@@ -234,7 +235,7 @@
                 <td><input type="text" name="vegoil_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'vegq')">
-                    <input class="quantity" type="number" name="vegoil_quantity" id="vegq" value="0" disabled>
+                    <input class="quantity" type="text" name="vegoil_quantity" id="vegq" value="0" disabled>
                     <input type="button" value="+" name="" id="increment" onclick="up('50', 'vegq')">
                 </td>
             </tr>
@@ -246,7 +247,7 @@
                 <td><input type="text" name="cucumber_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'cucumbq')">
-                    <input class="quantity" type="number" name="cucumber_quantity" id="cucumbq" value="0" disabled>
+                    <input class="quantity" type="text" name="cucumber_quantity" id="cucumbq" value="0" disabled>
                     <input type="button" value="+" name="" id="increment" onclick="up('50', 'cucumbq')">
                 </td>
             </tr>
@@ -258,7 +259,7 @@
                 <td><input type="text" name="tomato_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'tomq')">
-                    <input class="quantity" type="number" name="tomato_quantity" id="tomq" value="0" disabled>
+                    <input class="quantity" type="text" name="tomato_quantity" id="tomq" value="0" disabled>
                     <input type="button" value="+" name="" id="increment" onclick="up('50', 'tomq')">
                 </td>
             </tr>
@@ -270,7 +271,7 @@
                 <td><input type="text" name="honey_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'honq')">
-                    <input class="quantity" type="number" name="honey_quantity" id="honq" value="0" disabled>
+                    <input class="quantity" type="text" name="honey_quantity" id="honq" value="0" disabled>
                     <input type="button" value="+" name="" id="increment" onclick="up('50', 'honq')">
                 </td>
             </tr>
@@ -282,7 +283,7 @@
                 <td><input type="text" name="oatmeal_price" value="0" disabled></td>
                 <td>
                     <input type="button" value="-" name="" id="decrement" onclick="down('0', 'oatq')">
-                    <input class="quantity" type="number" name="oatmeal_quantity" id="oatq" value="0" disabled>
+                    <input class="quantity" type="text" name="oatmeal_quantity" id="oatq" value="0" disabled>
                     <input type="button" value="+" name="" id="increment" onclick="up('50', 'oatq')">
                 </td>
             </tr>
